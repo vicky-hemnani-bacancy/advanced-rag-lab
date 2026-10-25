@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advanced RAG Lab</title>
+<style>
+  :root{--bg:#f6f7fb;--surface:#fff;--border:#e4e7ef;--text:#101322;--muted:#6b7086;--primary:#2563eb;--primary-soft:#eef2ff;
+        --ok:#15803d;--ok-soft:#dcfce7;--warn:#b45309;--warn-soft:#fef3c7;--bad:#b91c1c;--bad-soft:#fee2e2;--dark:#16192b}
+  @media (prefers-color-scheme: dark){:root{--bg:#0f1220;--surface:#171a2b;--border:#2a2f47;--text:#e8eaf6;--muted:#9aa0bd;--primary:#6b9bff;--primary-soft:#1f2650;
+        --ok-soft:#12301f;--warn-soft:#3a2a0a;--bad-soft:#3b1414}}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  header{background:var(--dark);color:#fff;padding:18px 24px}
+  header h1{margin:0;font-size:20px} header p{margin:2px 0 0;color:#aab0d0;font-size:13px}
+  main{display:grid;grid-template-columns:330px 1fr;gap:20px;max-width:1280px;margin:0 auto;padding:20px}
+  @media(max-width:900px){main{grid-template-columns:1fr}}
+  .panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+  h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .doc{display:block;width:100%;text-align:left;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;color:inherit;font:inherit}
+  .doc.active{border-color:var(--primary);background:var(--primary-soft)} .doc b{display:block;font-size:14px} .doc span{color:var(--muted);font-size:12px}
+  .tech{display:inline-block;margin-top:6px;font-size:11px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:1px 8px;color:var(--muted)}
+  .seg{display:flex;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:3px;gap:3px}
+  .seg button{flex:1;border:0;background:none;padding:7px;border-radius:8px;cursor:pointer;color:var(--muted);font:inherit;font-size:13px}
+  .seg button.active{background:var(--primary);color:#fff}
+  .chip{display:block;width:100%;text-align:left;background:none;border:1px solid var(--border);border-radius:8px;padding:7px 10px;margin-bottom:6px;font:inherit;font-size:13px;color:var(--text);cursor:pointer}
+  .chip:hover{border-color:var(--primary)}
+  .ask{display:flex;gap:8px;margin-bottom:16px}
+  .ask input{flex:1;padding:12px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font:inherit}
+  .ask input:focus{outline:none;border-color:var(--primary)}
+  .btn{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:0 20px;font:inherit;font-weight:600;cursor:pointer}
+  .btn:disabled{opacity:.55;cursor:wait}
+  .answer{font-size:16px;line-height:1.6;white-space:pre-wrap}
+  .cite{display:inline-block;background:var(--primary-soft);color:var(--primary);border-radius:6px;padding:0 6px;font-size:12px;font-weight:700;cursor:pointer;margin:0 1px}
+  .badge{display:inline-block;font-size:11px;font-weight:600;border-radius:999px;padding:2px 9px;margin-right:6px}
+  .b-ok{background:var(--ok-soft);color:var(--ok)} .b-warn{background:var(--warn-soft);color:var(--warn)} .b-bad{background:var(--bad-soft);color:var(--bad)} .b-info{background:var(--primary-soft);color:var(--primary)}
+  .meta{margin-top:12px;font-size:12px;color:var(--muted)}
+  .src{border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-top:8px;background:var(--bg)}
+  .src.cited{border-color:var(--primary);background:var(--primary-soft)}
+  .src-h{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--muted)}
+  .src-h b{color:var(--text);font-size:13px}
+  .src pre{white-space:pre-wrap;font:12.5px/1.5 ui-monospace,Consolas,monospace;margin:8px 0 0;max-height:150px;overflow:auto;color:var(--text)}
+  .link{background:none;border:0;color:var(--primary);cursor:pointer;font:inherit;font-size:12px;padding:0;text-decoration:underline}
+  .err{color:var(--bad);margin-top:8px}
+  .empty{color:var(--muted);text-align:center;padding:40px 10px}
+  dialog{border:0;border-radius:14px;padding:0;max-width:min(92vw,820px);background:var(--surface);color:var(--text)}
+  dialog::backdrop{background:rgba(0,0,0,.55)} dialog img{display:block;max-width:100%;max-height:82vh}
+  dialog .bar{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--border);font-size:13px}
+  .spin{display:inline-block;width:14px;height:14px;border:2px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:s 0.8s linear infinite;vertical-align:-2px;margin-right:6px}
+  @keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<header><h1>Advanced RAG Lab</h1><p>Three documents, three document shapes: narrative text, a long structured report, and a chart/table/footnote-heavy brochure.</p></header>
+<main>
+  <aside>
+    <div class="panel">
+      <h2>Document</h2><div id="docs"></div>
+      <h2 style="margin-top:14px">Pipeline</h2>
+      <div class="seg" id="mode"><button data-m="advanced" class="active">Advanced</button><button data-m="naive">Naive baseline</button></div>
+      <p style="font-size:12px;color:var(--muted);margin:8px 0 0" id="modeHelp"></p>
+      <h2 style="margin-top:14px">Try a question</h2><div id="samples"></div>
+    </div>
+  </aside>
+  <section>
+    <form class="ask" id="form"><input id="q" placeholder="Ask a question about the selected document..." autocomplete="off"><button class="btn" id="go">Ask</button></form>
+    <div id="out"><div class="panel empty">Pick a document, then ask a question or click a sample.</div></div>
+  </section>
+</main>
+<dialog id="dlg"><div class="bar"><span id="dlgT"></span><button class="link" onclick="dlg.close()">Close</button></div><img id="dlgImg" alt="PDF page"></dialog>
+<script>
+const TECH={gpo:"sentence-aware chunks · hybrid search · rerank",gep:"hierarchical sections · region/chapter routing · tables",imac:"table geometry · footnote linking · chart vision",auto:"searches all three, reranker decides"};
+const HELP={advanced:"Layout-aware parsing, hierarchical metadata, BM25+dense fusion, cross-encoder rerank, grounded answer with number verification and abstention.",
+            naive:"Baseline: plain text cut into 1000-char windows, dense top-4, no rerank, no checks. Use it to see what the advanced pipeline fixes."};
+let doc="auto",mode="advanced",D=[];
+const $=s=>document.querySelector(s), esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function renderDocs(){
+  const all=[{key:"auto",title:"Auto (search all documents)",desc:"Let retrieval pick the right document",pages:null},...D];
+  $("#docs").innerHTML=all.map(d=>`<button class="doc ${d.key===doc?'active':''}" data-k="${d.key}"><b>${esc(d.title)}</b><span>${d.pages?d.pages+' pages':'3 documents'}</span><br><span class="tech">${TECH[d.key]}</span></button>`).join("");
+  document.querySelectorAll(".doc").forEach(b=>b.onclick=()=>{doc=b.dataset.k;renderDocs();renderSamples()});
+}
+function renderSamples(){
+  const s=doc==="auto"?D.flatMap(d=>d.samples.slice(0,2)):(D.find(d=>d.key===doc)?.samples||[]);
+  $("#samples").innerHTML=s.map(x=>`<button class="chip">${esc(x)}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{$("#q").value=b.textContent;ask()});
+}
+document.querySelectorAll("#mode button").forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll("#mode button").forEach(x=>x.classList.toggle("active",x===b));$("#modeHelp").textContent=HELP[mode]});
+$("#modeHelp").textContent=HELP.advanced;
+function fmtAnswer(t,sources){
+  return esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\[S(\d+)\]/g,(m,n)=>`<span class="cite" data-n="${n}">S${n}</span>`);
+}
+function showPage(s){ $("#dlgT").textContent=`${s.doc.toUpperCase()} · page ${s.page}`; $("#dlgImg").src=`/api/page/${s.doc}/${s.page}?dpi=110`; $("#dlg").showModal(); }
+async function ask(e){
+  if(e)e.preventDefault(); const q=$("#q").value.trim(); if(!q)return;
+  $("#go").disabled=true;
+  $("#out").innerHTML=`<div class="panel"><span class="spin"></span>Retrieving, reranking and answering…</div>`;
+  const slow=setTimeout(()=>{const o=document.querySelector('#out .panel');if(o)o.innerHTML='<span class="spin"></span>Waiting for model capacity (free-tier limit: about 2 questions per minute)…'},9000);
+  try{
+    const r=await fetch("/api/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q,doc,mode})});
+    if(!r.ok){let m=r.statusText;try{m=(await r.json()).detail||m}catch(_){m=(await r.text()).slice(0,200)||m}throw new Error(m)} const a=await r.json();
+    const badges=[`<span class="badge b-info">${a.mode}</span>`];
+    if(a.abstained||/could not find this/i.test(a.answer))badges.push(`<span class="badge b-warn">not found in document</span>`);
+    else if(a.mode==="advanced"){ badges.push(a.ungrounded_numbers.length?`<span class="badge b-bad">unverified numbers: ${esc(a.ungrounded_numbers.join(", "))}</span>`:`<span class="badge b-ok">all numbers found in cited sources</span>`); }
+    const t=a.timings||{};
+    $("#out").innerHTML=`<div class="panel"><div style="margin-bottom:8px">${badges.join("")}</div><div class="answer" id="ans">${fmtAnswer(a.answer)}</div>
+      <div class="meta">${a.model?'Model: '+esc(a.model)+' · ':''}Routing: ${esc(a.routing)} · ${Object.entries(t).map(([k,v])=>k+" "+v+"s").join(" · ")}</div></div>
+      <div class="panel" style="margin-top:14px"><h2>Sources (${a.sources.length})</h2>${a.sources.map((s,i)=>`
+      <div class="src ${a.cited.includes(i+1)?'cited':''}" id="s${i+1}"><div class="src-h"><b>S${i+1}</b><span class="badge b-info">${s.kind}</span><span>${s.doc} · page ${s.page}${s.page_end!==s.page?'–'+s.page_end:''}</span>
+      ${s.section?`<span>· ${esc(s.section)}</span>`:''}<span>· score ${s.score}</span>${a.cited.includes(i+1)?'<span class="badge b-ok">cited</span>':''}<button class="link" data-p="${i}">view page</button></div>
+      <pre>${esc(s.text.slice(0,1200))}</pre></div>`).join("")}</div>`;
+    document.querySelectorAll(".cite").forEach(c=>c.onclick=()=>$("#s"+c.dataset.n)?.scrollIntoView({behavior:"smooth",block:"center"}));
+    document.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>showPage(a.sources[+b.dataset.p]));
+  }catch(err){$("#out").innerHTML=`<div class="panel err">${esc(String(err.message||err))}</div>`}
+  clearTimeout(slow); $("#go").disabled=false;
+}
+$("#form").onsubmit=ask;
+fetch("/api/docs").then(r=>r.json()).then(d=>{D=d;renderDocs();renderSamples()});
+</script>
+</body>
+</html>

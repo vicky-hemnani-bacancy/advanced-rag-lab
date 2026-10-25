@@ -1,0 +1,1411 @@
+[
+ {
+  "id": "gpo-1",
+  "doc": "gpo",
+  "official": true,
+  "q": "How many depository libraries did GPO staff visit in FY 2018?",
+  "mode": "advanced",
+  "pages": [
+   21,
+   4,
+   19,
+   5,
+   20,
+   19
+  ],
+  "scores": [
+   3.03,
+   2.18,
+   2.12,
+   2.0,
+   1.96,
+   1.77
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "In FY 2018, GPO staff visited 166 depository libraries [S1][S2]. (Pages 21 and 4-5)",
+  "latency": 7.1,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.6,
+   "total": 7.1,
+   "llm": 4.5
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-2",
+  "doc": "gpo",
+  "official": true,
+  "q": "What new digital system replaced FDsys, and when was it fully deployed?",
+  "mode": "advanced",
+  "pages": [
+   10,
+   39,
+   22,
+   21,
+   7,
+   4
+  ],
+  "scores": [
+   0.33,
+   0.08,
+   -0.26,
+   -0.79,
+   -0.85,
+   -0.89
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "The new digital system that replaced FDsys is govinfo [S1][S3]. Following a period of iterative development, testing, and running in parallel with FDsys throughout 2018, FDsys was scheduled to be completely retired and replaced by govinfo in December 2018 [S1][S3]. (See page 10 and 22).",
+  "latency": 5.9,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.1,
+   "total": 5.9,
+   "llm": 3.7
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   3
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-3",
+  "doc": "gpo",
+  "official": true,
+  "q": "How much did GPO procure in printing and information products in FY 2018 on behalf of federal agencies?",
+  "mode": "advanced",
+  "pages": [
+   5,
+   23,
+   17,
+   5,
+   17,
+   13
+  ],
+  "scores": [
+   1.84,
+   1.57,
+   1.54,
+   1.04,
+   1.01,
+   0.99
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "In FY 2018, GPO procured more than $375 million worth of printing and other information products on behalf of Federal agency partners [S1].",
+  "latency": 5.0,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.1,
+   "total": 5.0,
+   "llm": 2.8
+  },
+  "ungrounded": [],
+  "cited": [
+   1
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-4",
+  "doc": "gpo",
+  "official": false,
+  "q": "How many titles and copies did GPO distribute to depository libraries in FY 2018?",
+  "mode": "advanced",
+  "pages": [
+   15,
+   19,
+   5,
+   4,
+   8,
+   21
+  ],
+  "scores": [
+   2.83,
+   2.82,
+   2.38,
+   1.84,
+   1.67,
+   1.49
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "In FY 2018, GPO distributed 4,211 titles and 802,834 tangible copies to depository libraries nationwide [S1][S2]. (Pages 15-16, 19-20)",
+  "latency": 5.1,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.2,
+   "total": 5.1,
+   "llm": 2.7
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-5",
+  "doc": "gpo",
+  "official": false,
+  "q": "When was the govinfo website moved out of beta?",
+  "mode": "advanced",
+  "pages": [
+   22,
+   21,
+   17,
+   4,
+   39,
+   10
+  ],
+  "scores": [
+   2.05,
+   -0.66,
+   -1.03,
+   -1.13,
+   -1.19,
+   -1.2
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "The govinfo website was moved out of beta in December 2017 [S1][S2] (page 22).",
+  "latency": 3.5,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.1,
+   "total": 3.5,
+   "llm": 1.4
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-6",
+  "doc": "gpo",
+  "official": false,
+  "q": "How many passports did GPO produce in FY 2018?",
+  "mode": "advanced",
+  "pages": [
+   18,
+   5,
+   26,
+   17,
+   40,
+   15
+  ],
+  "scores": [
+   3.25,
+   1.49,
+   1.44,
+   1.34,
+   1.02,
+   0.93
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "In FY 2018, GPO produced 16 million passports for the State Department [S1][S2]. (Page 18 [S1], Page 5-6 [S2])",
+  "latency": 4.4,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.6,
+   "total": 4.4,
+   "llm": 1.8
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-7",
+  "doc": "gpo",
+  "official": false,
+  "q": "How many FDLP Academy webinars did GPO host and how many participants did they serve?",
+  "mode": "advanced",
+  "pages": [
+   5,
+   4,
+   20,
+   21,
+   39,
+   21
+  ],
+  "scores": [
+   1.84,
+   1.23,
+   0.55,
+   0.5,
+   -0.23,
+   -0.38
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "GPO hosted over 85 FDLP Academy webinars that served more than 10,000 participants in FY 2018 (pages 5 and 4-5) [S1][S2].",
+  "latency": 6.9,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.4,
+   "total": 6.9,
+   "llm": 4.4
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gpo-x",
+  "doc": "gpo",
+  "official": false,
+  "q": "Who won the 2022 FIFA World Cup?",
+  "mode": "advanced",
+  "pages": [
+   50,
+   28,
+   27,
+   81,
+   12,
+   1
+  ],
+  "scores": [
+   -4.02,
+   -4.04,
+   -4.44,
+   -4.44,
+   -4.49,
+   -4.51
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "I could not find this in the document.",
+  "latency": 2.7,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.7,
+   "total": 2.7,
+   "llm": 0.0
+  },
+  "ungrounded": [],
+  "cited": [],
+  "routing": "no explicit constraint",
+  "model": "",
+  "type": "abstain",
+  "correct": true,
+  "top_score": -4.021739959716797
+ },
+ {
+  "id": "gep-1",
+  "doc": "gep",
+  "official": true,
+  "q": "What is the growth outlook for South Asia in this report?",
+  "mode": "advanced",
+  "pages": [
+   96,
+   96,
+   98,
+   97,
+   98,
+   97
+  ],
+  "scores": [
+   3.42,
+   3.18,
+   2.76,
+   2.74,
+   2.56,
+   2.37
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "table",
+   "text",
+   "table",
+   "text"
+  ],
+  "answer": "Growth in SAR is expected to soften to 6.3 percent in 2026, mainly due to the adverse impact of the conflict in the Middle East [S2]. With conflict-related disruptions assumed to wane by the end of the year, growth in SAR is set to pick up to an average rate of 7 percent per year in 2027–28 [S2]. (Pages 96–97)",
+  "latency": 6.5,
+  "timings": {
+   "embed": 0.1,
+   "retrieve": 0.1,
+   "rerank": 3.2,
+   "total": 6.5,
+   "llm": 3.1
+  },
+  "ungrounded": [],
+  "cited": [
+   2
+  ],
+  "routing": "region: South Asia",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-2",
+  "doc": "gep",
+  "official": true,
+  "q": "What does Chapter 3 say about sovereign debt in developing economies?",
+  "mode": "advanced",
+  "pages": [
+   109,
+   111,
+   109,
+   116,
+   113,
+   133
+  ],
+  "scores": [
+   3.99,
+   3.95,
+   3.94,
+   3.81,
+   3.66,
+   3.61
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "Chapter 3 states that aggregate government debt in emerging market and developing economies (EMDEs) has risen from less than 40 percent of GDP in 2010 to over 70 percent, which has driven up the cost of servicing government debt from 6 percent of government revenues in 2010 to an estimated 11 percent in 2025 [S1]. Mounting debt-service payments pose four critical challenges: the diversion of resources from priority uses like infrastructure, health, education, and social safety nets; the need for additional borrowing to finance high debt-service obligations, causing debt to rise further; an increase in the economy-wide cost of capital that limits investment and private-sector growth; and the potential to trigger debt distress, default, and severe economic disruption [S1]. Additionally, the chapter notes that debt levels are positively associated with dollar-denominated sovereign bond spreads and domestic-currency government bond yields in a non-linear relationship where increases in spreads or yields are greater when the debt-to-GDP ratio is higher [S3].",
+  "latency": 10.7,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.2,
+   "total": 10.7,
+   "llm": 8.4
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   3
+  ],
+  "routing": "chapter 3",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-3",
+  "doc": "gep",
+  "official": true,
+  "q": "According to the executive summary, what are the main risks to the global outlook?",
+  "mode": "advanced",
+  "pages": [
+   19,
+   19,
+   54,
+   53,
+   52,
+   54
+  ],
+  "scores": [
+   1.76,
+   1.42,
+   1.05,
+   0.93,
+   0.78,
+   0.66
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "chart",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "According to the executive summary, risks to the outlook remain skewed to the downside and include:\n* A renewed escalation of hostilities or more prolonged disruptions to commodity flows, which could further raise commodity prices, intensify inflationary pressures and food insecurity, trigger financial stress, and lower growth [S1][S2].\n* Persistent trade policy uncertainty, geopolitical strains, and weather-related shocks [S1][S2].\n\nThese details are found on page 19 [S1][S2].",
+  "latency": 7.1,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.6,
+   "total": 7.1,
+   "llm": 4.4
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "Executive Summary",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-4",
+  "doc": "gep",
+  "official": false,
+  "q": "What is the growth outlook for East Asia and Pacific in 2026?",
+  "mode": "advanced",
+  "pages": [
+   81,
+   81,
+   82,
+   82,
+   83,
+   81
+  ],
+  "scores": [
+   4.0,
+   3.8,
+   3.43,
+   3.38,
+   3.31,
+   3.25
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "chart",
+   "text",
+   "table",
+   "text"
+  ],
+  "answer": "Growth in the East Asia and Pacific (EAP) region is projected to moderate to 4.2 percent in 2026, down from 5 percent in 2025 [S1]. (Page 81)",
+  "latency": 6.1,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 3.2,
+   "total": 6.1,
+   "llm": 2.9
+  },
+  "ungrounded": [],
+  "cited": [
+   1
+  ],
+  "routing": "region: East Asia and Pacific",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-5",
+  "doc": "gep",
+  "official": false,
+  "q": "How fast did growth in Sub-Saharan Africa firm in 2025?",
+  "mode": "advanced",
+  "pages": [
+   100,
+   99,
+   99,
+   101,
+   102,
+   101
+  ],
+  "scores": [
+   3.25,
+   3.09,
+   1.83,
+   1.73,
+   1.73,
+   1.72
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "table",
+   "table",
+   "table"
+  ],
+  "answer": "Growth in Sub-Saharan Africa firmed to an estimated 4.1 percent in 2025 [S2]. (Page 99)",
+  "latency": 8.6,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 3.2,
+   "total": 8.6,
+   "llm": 5.4
+  },
+  "ungrounded": [],
+  "cited": [
+   2
+  ],
+  "routing": "region: Sub-Saharan Africa",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 2,
+  "hit@1": false,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-6",
+  "doc": "gep",
+  "official": false,
+  "q": "What is global growth projected to be in 2026 and how does it compare with 2025?",
+  "mode": "advanced",
+  "pages": [
+   36,
+   41,
+   25,
+   40,
+   51,
+   27
+  ],
+  "scores": [
+   2.13,
+   1.73,
+   1.73,
+   1.6,
+   1.53,
+   1.52
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "Global growth is projected to slow to 2.5 percent in 2026 from 2.9 percent in 2025 [S3]. This is noted on page 25 [S3].",
+  "latency": 7.5,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 3.2,
+   "total": 7.5,
+   "llm": 4.3
+  },
+  "ungrounded": [],
+  "cited": [
+   3
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-7",
+  "doc": "gep",
+  "official": false,
+  "q": "How low could global growth fall in 2026 if energy disruptions are more severe than assumed?",
+  "mode": "advanced",
+  "pages": [
+   25,
+   28,
+   19,
+   54,
+   52,
+   27
+  ],
+  "scores": [
+   1.97,
+   1.77,
+   1.73,
+   1.59,
+   1.49,
+   1.36
+  ],
+  "kinds": [
+   "text",
+   "text",
+   "text",
+   "text",
+   "text",
+   "text"
+  ],
+  "answer": "If energy supply disruptions prove to be more severe than assumed and are accompanied by substantial financial stress, global growth could fall to just 1.3 percent in 2026 [S1][S2][S3] (pages 19, 25, and 28-29).",
+  "latency": 6.7,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.3,
+   "total": 6.7,
+   "llm": 4.3
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2,
+   3
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-8",
+  "doc": "gep",
+  "official": false,
+  "q": "In the South Asia forecast summary table, what is projected EMDE SAR GDP growth for 2027?",
+  "mode": "advanced",
+  "pages": [
+   98,
+   96,
+   98,
+   96,
+   98,
+   97
+  ],
+  "scores": [
+   4.13,
+   3.87,
+   3.37,
+   3.29,
+   3.27,
+   2.91
+  ],
+  "kinds": [
+   "table",
+   "text",
+   "table",
+   "text",
+   "table",
+   "text"
+  ],
+  "answer": "Based on the South Asia forecast summary table, the projected EMDE SAR GDP growth for 2027 is 6.9 percent [S1]. (Page 98)",
+  "latency": 6.9,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 3.3,
+   "total": 6.9,
+   "llm": 3.6
+  },
+  "ungrounded": [],
+  "cited": [
+   1
+  ],
+  "routing": "region: South Asia",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "gep-x",
+  "doc": "gep",
+  "official": false,
+  "q": "What is the projected GDP growth of Brazil in the year 2031?",
+  "mode": "advanced",
+  "pages": [
+   88,
+   91,
+   26,
+   89,
+   26,
+   31
+  ],
+  "scores": [
+   -0.75,
+   -0.81,
+   -1.02,
+   -1.17,
+   -1.29,
+   -1.71
+  ],
+  "kinds": [
+   "text",
+   "table",
+   "table",
+   "chart",
+   "table",
+   "chart"
+  ],
+  "answer": "I could not find this in the document.",
+  "latency": 7.7,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 3.2,
+   "total": 7.7,
+   "llm": 4.4
+  },
+  "ungrounded": [],
+  "cited": [],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "abstain",
+  "correct": true,
+  "top_score": -0.7515257000923157
+ },
+ {
+  "id": "imac-1",
+  "doc": "imac",
+  "official": true,
+  "q": "How much less energy does iMac use compared to the ENERGY STAR requirement?",
+  "mode": "advanced",
+  "pages": [
+   7,
+   7,
+   12,
+   5,
+   10,
+   1
+  ],
+  "scores": [
+   2.16,
+   1.38,
+   0.77,
+   -0.78,
+   -0.91,
+   -0.95
+  ],
+  "kinds": [
+   "callout",
+   "text",
+   "footnote",
+   "callout",
+   "table",
+   "callout"
+  ],
+  "answer": "iMac uses 58 percent less energy than the requirement for ENERGY STAR (page 7) [S1][S2].",
+  "latency": 4.9,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.3,
+   "total": 4.9,
+   "llm": 2.5
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-2",
+  "doc": "imac",
+  "official": true,
+  "q": "What is the total carbon footprint of the iMac, and how much of that comes from product use versus manufacturing?",
+  "mode": "advanced",
+  "pages": [
+   10,
+   10,
+   10,
+   1,
+   9,
+   10
+  ],
+  "scores": [
+   1.23,
+   0.89,
+   0.61,
+   0.53,
+   0.14,
+   0.0
+  ],
+  "kinds": [
+   "table",
+   "chart",
+   "text",
+   "callout",
+   "callout",
+   "table"
+  ],
+  "answer": "Based on the Apple iMac Product Environmental Report (page 10), the total product footprint is 346 kg CO2e for the iMac (two ports) 256GB and 391 kg CO2e for the iMac (four ports) 512GB [S1][S2][S6]. \n\nFor the iMac (two ports) 256GB, production accounts for 50% and product use accounts for 45% of the life cycle product emissions [S1].",
+  "latency": 6.0,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.5,
+   "total": 6.0,
+   "llm": 3.5
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2,
+   6
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-3",
+  "doc": "imac",
+  "official": true,
+  "q": "What material is the iMac stand made from, and what percentage of it is recycled?",
+  "mode": "advanced",
+  "pages": [
+   4,
+   1,
+   6,
+   4,
+   1,
+   11
+  ],
+  "scores": [
+   1.78,
+   1.42,
+   1.17,
+   0.99,
+   0.96,
+   0.81
+  ],
+  "kinds": [
+   "callout",
+   "callout",
+   "callout",
+   "text",
+   "text",
+   "footnote"
+  ],
+  "answer": "The iMac stand is made from aluminum, and it uses 100 percent recycled aluminum [S1][S2][S4]. (Page 1 [S2][S5] and Page 4 [S1][S4])",
+  "latency": 7.9,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.3,
+   "total": 7.9,
+   "llm": 5.6
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2,
+   4,
+   5
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-4",
+  "doc": "imac",
+  "official": false,
+  "q": "What is the carbon footprint of the iMac (four ports) 512GB configuration?",
+  "mode": "advanced",
+  "pages": [
+   10,
+   10,
+   10,
+   10,
+   1,
+   11
+  ],
+  "scores": [
+   1.33,
+   0.46,
+   -0.3,
+   -0.31,
+   -0.55,
+   -0.82
+  ],
+  "kinds": [
+   "table",
+   "chart",
+   "table",
+   "text",
+   "text",
+   "footnote"
+  ],
+  "answer": "The carbon footprint of the iMac (four ports) 512GB configuration is 391 kg CO2e [S1][S2] (found on page 10 [S1][S2]).",
+  "latency": 6.2,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.4,
+   "total": 6.2,
+   "llm": 3.7
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-5",
+  "doc": "imac",
+  "official": false,
+  "q": "What is the power consumption of iMac in sleep mode at 115V?",
+  "mode": "advanced",
+  "pages": [
+   12,
+   12,
+   7,
+   7,
+   4,
+   1
+  ],
+  "scores": [
+   0.24,
+   -0.23,
+   -1.35,
+   -1.45,
+   -1.71,
+   -1.77
+  ],
+  "kinds": [
+   "table",
+   "footnote",
+   "text",
+   "callout",
+   "text",
+   "text"
+  ],
+  "answer": "The power consumption of iMac in sleep mode at 115V is 0.57W [S1] (page 12).",
+  "latency": 6.5,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.2,
+   "total": 6.5,
+   "llm": 4.3
+  },
+  "ungrounded": [],
+  "cited": [
+   1
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-6",
+  "doc": "imac",
+  "official": false,
+  "q": "What percentage of the fiber packaging is recycled content?",
+  "mode": "advanced",
+  "pages": [
+   6,
+   6,
+   1,
+   1,
+   11,
+   11
+  ],
+  "scores": [
+   2.23,
+   1.68,
+   1.62,
+   0.88,
+   0.65,
+   -0.13
+  ],
+  "kinds": [
+   "callout",
+   "text",
+   "callout",
+   "text",
+   "footnote",
+   "footnote"
+  ],
+  "answer": "76% of the fiber packaging is recycled content (page 6) [S2].",
+  "latency": 7.4,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.2,
+   "total": 7.4,
+   "llm": 5.2
+  },
+  "ungrounded": [],
+  "cited": [
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-7",
+  "doc": "imac",
+  "official": false,
+  "q": "What were the baseline emissions before reductions in the carbon chart, and how large is the reduction?",
+  "mode": "advanced",
+  "pages": [
+   2,
+   2,
+   11,
+   11,
+   10,
+   10
+  ],
+  "scores": [
+   -0.35,
+   -0.54,
+   -0.56,
+   -1.34,
+   -1.39,
+   -1.66
+  ],
+  "kinds": [
+   "text",
+   "chart",
+   "footnote",
+   "footnote",
+   "chart",
+   "table"
+  ],
+  "answer": "Based on the report (page 2), the baseline emissions before reductions are **445 kg**, and the emissions reduction is **–99 kg** [S1][S2].",
+  "latency": 7.0,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.4,
+   "total": 7.0,
+   "llm": 4.6
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-8",
+  "doc": "imac",
+  "official": false,
+  "q": "Which power adapter was used when testing iMac against the ENERGY STAR requirements?",
+  "mode": "advanced",
+  "pages": [
+   12,
+   7,
+   7,
+   12,
+   1,
+   1
+  ],
+  "scores": [
+   0.68,
+   -0.53,
+   -0.95,
+   -1.67,
+   -1.76,
+   -1.98
+  ],
+  "kinds": [
+   "footnote",
+   "text",
+   "callout",
+   "table",
+   "text",
+   "callout"
+  ],
+  "answer": "The iMac is tested with the 143W Power Adapter, AC Cable (1m), and DC Cable (2m) [S1][S2]. This information is found on page 12 and page 7 [S1][S2].",
+  "latency": 8.0,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.4,
+   "total": 8.0,
+   "llm": 5.6
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   2
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-9",
+  "doc": "imac",
+  "official": false,
+  "q": "What share of manufacturing electricity comes from supplier low-carbon energy projects?",
+  "mode": "advanced",
+  "pages": [
+   5,
+   11,
+   9,
+   5,
+   2,
+   1
+  ],
+  "scores": [
+   0.83,
+   0.39,
+   0.05,
+   0.04,
+   0.03,
+   0.0
+  ],
+  "kinds": [
+   "callout",
+   "footnote",
+   "text",
+   "text",
+   "text",
+   "callout"
+  ],
+  "answer": "Over 20 percent of manufacturing electricity is sourced from supplier low-carbon energy projects [S1][S4] (page 5).",
+  "latency": 7.4,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.4,
+   "total": 7.4,
+   "llm": 5.0
+  },
+  "ungrounded": [],
+  "cited": [
+   1,
+   4
+  ],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "answerable",
+  "hit": true,
+  "rank": 1,
+  "hit@1": true,
+  "correct": true,
+  "leak": []
+ },
+ {
+  "id": "imac-x",
+  "doc": "imac",
+  "official": false,
+  "q": "How many iMac units did Apple sell worldwide in 2024?",
+  "mode": "advanced",
+  "pages": [
+   1,
+   10,
+   5,
+   10,
+   3,
+   1
+  ],
+  "scores": [
+   0.33,
+   -0.17,
+   -0.22,
+   -0.41,
+   -0.42,
+   -0.46
+  ],
+  "kinds": [
+   "callout",
+   "table",
+   "callout",
+   "chart",
+   "callout",
+   "text"
+  ],
+  "answer": "I could not find this in the document.",
+  "latency": 6.5,
+  "timings": {
+   "embed": 0.0,
+   "retrieve": 0.0,
+   "rerank": 2.3,
+   "total": 6.5,
+   "llm": 4.1
+  },
+  "ungrounded": [],
+  "cited": [],
+  "routing": "no explicit constraint",
+  "model": "gemini-flash-lite-latest",
+  "type": "abstain",
+  "correct": true,
+  "top_score": 0.32508038282394414
+ }
+]

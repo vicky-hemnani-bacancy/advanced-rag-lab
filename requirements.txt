@@ -1,0 +1,9 @@
+pymupdf
+fastembed
+chromadb
+rank-bm25
+openai
+fastapi
+uvicorn[standard]
+python-dotenv
+numpy
